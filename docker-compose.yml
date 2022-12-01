@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  simpleauthentication:
+    image: ${DOCKER_REGISTRY-}simpleauthentication
+    build:
+      context: .
+      dockerfile: SimpleAuthentication/Dockerfile

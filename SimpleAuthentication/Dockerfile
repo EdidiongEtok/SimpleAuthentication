@@ -8,6 +8,8 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["SimpleAuthentication/SimpleAuthentication.csproj", "SimpleAuthentication/"]
+COPY ["SimpleAuthenticationData/SimpleAuthenticationData.csproj", "SimpleAuthenticationData/"]
+COPY ["SimpleAuthenticationDomain/SimpleAuthenticationDomain.csproj", "SimpleAuthenticationDomain/"]
 RUN dotnet restore "SimpleAuthentication/SimpleAuthentication.csproj"
 COPY . .
 WORKDIR "/src/SimpleAuthentication"
